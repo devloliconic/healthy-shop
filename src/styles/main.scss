@@ -1,3 +1,65 @@
-$bg: #ff0;
+$text: #27300f;
+$orange: #d26a22;
+$white: #ffffff;
 
 
+.header{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__nav{
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 48px;
+    }
+    &__link{
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+        &:hover{
+            color:$orange;
+        }
+    }
+    &__tel{
+        color: $text;
+        font-size: 16px;
+        text-decoration: none;
+        &:hover{
+            color:$orange;
+        }
+    }
+    &__cart{
+        display: block;
+        background-color: $orange;
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/cart-black.svg);
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px 16px;
+        position: relative;
+    }
+    &__counter{
+        font-size: 8px;
+        color: $white;
+        position:absolute;
+        right: 10px;
+        top: 5px;
+
+    }
+}
+.logo{
+    width: 123px;
+    height: 32px;
+    display: block;
+    background-image: url(../images/logo1.svg);
+    background-repeat: no-repeat;
+    border-style: cover;
+}
