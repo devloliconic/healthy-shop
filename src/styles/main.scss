@@ -130,6 +130,8 @@ body{
     }
     &__image{
         width: 92%;
+        box-shadow: 15px 20px 20px 0 rgba(#000,.2);
+        border-radius: 100%;
     }
     &__btn{
         border: none;
@@ -195,7 +197,7 @@ body{
         position: absolute;
         top: 0px;
         width: 8rem;
-        left: 520px;
+        left: 710px;
     }
     &__papper{
         position:absolute;
