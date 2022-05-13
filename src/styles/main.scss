@@ -17,13 +17,12 @@ body{
 }
 
 .header{
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
     margin-bottom: 6rem;
     &__nav{
         display: flex;
@@ -60,6 +59,7 @@ body{
         background-size: 1.6rem 1.6rem;
         position: relative;
         border: 1px solid $orange;
+        z-index: 100;
         &:hover{
             background-color: $green;
             border: 1px solid $green;
@@ -71,7 +71,6 @@ body{
         position:absolute;
         right: 1rem;
         top: .5rem;
-
     }
 }
 .logo{
@@ -83,7 +82,7 @@ body{
     border-style: cover;
 }
 .container{
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -91,8 +90,9 @@ body{
 .main{
     background-image: url(../images/main.png);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-position-x: center;
+    position: relative;
+    padding-bottom: 187px;
     &__item{
         margin-left:  12rem;
         max-width: 378px;
@@ -110,7 +110,18 @@ body{
     &__cover{
         flex-basis: 763px;
         height: 763px ;
-        border: 1px solid  rgba($color: $green, $alpha: .4);
+        border: 1px solid  rgba($green, .4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__line{
+        width: 658px;
+        height: 658px;
+        border: 1px solid  rgba($green, .4);
         border-radius: 100%;
         display: flex;
         flex-direction: column;
@@ -119,19 +130,86 @@ body{
     }
     &__image{
         width: 92%;
+    }
+    &__btn{
+        border: none;
+        padding: 0;
+        position: absolute;
+        color: $green;
+        background-color: transparent;
+        &::before{
+            content: '';
+            background-color: $green;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            border-radius: 100%;
+            width: 11px;
+            height: 11px;
+            position: absolute;
+        }
+        &_1{
+            top: 45px;
+            left: 65px;
+            &::before{
+                bottom: 4px;
+                right: -35px;
+            }
+            
+        }
+        &_2{
+            top: 190px;
+            right: 10px;
+            &::before{
+                bottom: 6px;
+                left: -18px;
+            }
+        }
+        &_3{
+            bottom: -43px;
+            right: 250px;
+            &::before{
+                top: -24px;
+                right: 30px;
+            }
+        }
+    }
+    &__food{
+        display: block;
+        text-align: left;
+        color: rgba($green, .8);
+        
 
     }
-    &__line{
-        width: 658px;
-        height: 658px;
-        border: 1px solid  rgba($color: $green, $alpha: .4);
-        border-radius: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    &__tomato{
+        position: absolute;
+        width: 11rem;
+        bottom: 0;
+        right:0;
     }
+    &__avocado{
+        position: absolute;
+        width: 17.8rem;
+        right: 30px;
+        top: 47px;
+    }
+    &__cucumber{
+        position: absolute;
+        top: 0px;
+        width: 8rem;
+        left: 520px;
+    }
+    &__papper{
+        position:absolute;
+        left: 40px;
+        top: 400px;
+        width: 8.6rem;
+    }
+    &__beans{
+        position: absolute;
+        bottom: 200px;
+        left: 0px;
+        width: 10.5rem;
+    }
+
 }
 .title{
     font-family: $font-cormorant;
