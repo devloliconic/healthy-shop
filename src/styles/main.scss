@@ -309,17 +309,18 @@ body{
     &-slide{
         border: 1px solid rgba($green, 0.4);
         border-radius: 2rem;
-        padding: 4rem 3.7rem;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 46.5rem;
+        padding: 3rem 3.7rem 3.8rem;
         box-sizing: border-box;
         position: relative;
         transition: .2s all;
         z-index: 0;
         &_white{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
             justify-content: flex-end;
+            height: 520px;
+            padding: 4rem 3.7rem;
             &:hover{
                 .swiper-slide__text{
                     opacity: 1;
@@ -385,8 +386,14 @@ body{
         }
         &__description{
             font-size: 1.8rem;
+            margin-top: 31px;
+            margin-bottom: 0;
+            min-height: 55px;
+            max-width: 300px;
             &_litle{
                 font-size: 1.6rem;
+                margin-top: 31px;
+                max-width: 280px;
             }
         }
         &__link{
@@ -418,21 +425,29 @@ body{
             }
         }
         &_trends{
-            height: 60rem;
+            // height: 68.2rem;
         }
         &_catalog{
-            height: 50rem;
+            // height: 50rem;
             padding: 2rem 3rem;
         }
         &__cover{
-            
             overflow: hidden;
             width: 100%;
-            height: 293px;
+            height: 322px;
             text-align: center;
+            &_litle{
+                height: 220px;
+            }
         }
         &__img{
+            width: 100%;
+            object-fit: contain;
+            max-width: 351px;
             height: 100%;
+            &_litle{
+                width: 80%;
+            }
 
         }
         &__footer{
@@ -445,6 +460,11 @@ body{
         }
         &__price{
             font-size: 2.4rem;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            &_litle{
+                margin-top: 24px ;
+            }
         }
     }
 
