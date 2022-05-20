@@ -275,6 +275,7 @@ body{
     letter-spacing: 0.13rem;
     border-radius: 3.8rem;
     display:inline-block;
+    transition: .2s;
     &_litle{
         padding: 2.1rem 2.9rem;
         font-size: 1.4rem;
@@ -390,10 +391,11 @@ body{
             margin-bottom: 0;
             min-height: 55px;
             max-width: 300px;
+            line-height: 1.5;
             &_litle{
                 font-size: 1.6rem;
                 margin-top: 31px;
-                max-width: 280px;
+                max-width: 230px;
             }
         }
         &__link{
@@ -606,7 +608,7 @@ body{
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    padding-bottom: 20rem;
+    padding-bottom: 17.4rem;
     &__text{
         margin-top: 6rem;
     }
@@ -660,5 +662,184 @@ body{
             background-position: center center;
             background-size: cover;
         }
+    }
+}
+.pay{
+    padding-bottom: 200px;
+    &__bottomtext{
+        display: block;
+        margin-top: 40px;
+    }
+    &__text{
+        margin-left: 100px;
+        margin-top: 94px;
+        display: flex;
+        gap: 170px;
+        align-items: center;
+    }
+    &__left{
+        
+        display: flex;
+        flex-direction: column;
+        max-width: 589px;
+    }
+    &__link{
+        color: $green;
+        transition: .2s;
+        &:hover{
+            color: $orange;
+        }
+    }
+    &__orangetext{
+        color: $orange;
+    }
+    &__right{
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        gap: 55px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        
+    }
+    &__bank{
+        opacity: .4;
+        transition: .2s;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        &:hover{
+            opacity: 1;
+        }
+        &:nth-child(1){
+            width: 55px;
+            height: 33px;
+            background-image: url(../images/pay/mastercard.png);
+
+        }
+        &:nth-child(2){
+            width: 73px;
+            height: 23px;
+            background-image: url(../images/pay/visa.png);
+
+        }
+        &:nth-child(3){
+            width: 87px;
+            height: 24px;
+            background-image: url(../images/pay/paypal.png);
+
+        }
+    }
+}
+.contact{
+    padding-bottom: 100px;
+    &-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text{
+            margin-left: 12.2rem;
+            max-width: 400px;
+            flex-grow: 1;
+        }
+        &__form{
+            flex-basis: 589px;
+        }
+        &__subtitle{
+            margin-top: 8rem;
+        }
+        &__list{
+            li:last-child{
+                margin-top: 3rem;
+            }
+            margin: 0;         
+            margin-top: 7rem;
+
+            padding: 0;
+            list-style: none;
+        }
+        &__link{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 2.4rem;
+            color: $green;
+            font-weight:500;
+            &::before{
+                content: "";
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            &_1{
+                &::before{
+                    background-image: url(../images/phone.svg);
+                    width: 30px;
+                    height: 26px;
+                }
+            }
+            &_2{
+                &::before{
+                    width: 30px;
+                    height: 19px;
+                    background-image: url(../images/mail.svg);
+                }
+            }
+        }
+    }
+}
+.card{
+    border: 2px solid rgba($green, .4);
+    padding: 3.2rem 5.8rem 4rem;
+    border-radius: 2rem;
+    &__title{
+        font-size: 3rem;
+        font-family: $font-cormorant;
+        margin-top: 0;
+    }
+    &__label{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display:block;
+        margin-left: .6rem;
+    }
+    &__input{
+        display:block;
+        border: 1px solid rgba($green, .4);
+        padding: 2.2rem 3rem;
+        margin-bottom: 2.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 2rem;
+        &:focus{
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+        &:invalid{
+            border:red;
+        }
+
+    }
+    &__check{
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+        max-width: 360px;
+
+    }
+    &__link{
+        margin-top: 1.2rem;
+    }
+    &__docs{
+        color: rgba($green, .6);
+        text-decoration: none;
+        border-bottom: 1px solid #ecedec;
     }
 }
