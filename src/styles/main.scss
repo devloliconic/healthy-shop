@@ -671,21 +671,34 @@ body{
         margin-top: 40px;
     }
     &__text{
-        margin-left: 100px;
-        margin-top: 94px;
+        margin-left: 12rem;
+        margin-top: 5.6rem;
+        line-height: 1.5;
         display: flex;
-        gap: 170px;
+        gap: 12%;
         align-items: center;
     }
     &__left{
         
         display: flex;
-        flex-direction: column;
-        max-width: 589px;
+        flex-basis: 44%;
     }
     &__link{
         color: $green;
         transition: .2s;
+        text-decoration: none;
+        position: relative;
+        &::after{
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #858881 ;
+
+        }
         &:hover{
             color: $orange;
         }
@@ -703,7 +716,7 @@ body{
     &__list{
         display: flex;
         align-items: center;
-        gap: 32px;
+        gap: 3rem;
         
     }
     &__bank{
@@ -842,4 +855,11 @@ body{
         text-decoration: none;
         border-bottom: 1px solid #ecedec;
     }
+}
+
+.footer{
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
