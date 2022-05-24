@@ -3,6 +3,7 @@
 $green: #27300f;
 $orange: #d26a22;
 $white: #ffffff;
+$darkorange: #BF601F;
 
 $font-jost: 'Jost', sans-serif;;
 $font-cormorant: 'Cormorant', serif;;
@@ -40,7 +41,7 @@ body{
     &__link{
         color: $green;
         text-decoration: none;
-        
+        transition: .2s;
         &:hover{
             color:$orange;
         }
@@ -50,7 +51,7 @@ body{
         text-decoration: none;
         font-weight: 500;
         margin-left: 14rem;
-
+        transition: .2s;
         &:hover{
             color:$orange;
         }
@@ -67,6 +68,7 @@ body{
         background-size: 1.6rem 1.6rem;
         position: relative;
         border: 1px solid $orange;
+        transition: .2s;
         &:hover{
             background-color: $green;
             border: 1px solid $green;
@@ -155,6 +157,7 @@ body{
         position: absolute;
         color: $green;
         background-color: transparent;
+        transition: .2s;
         &:hover{
             &::before{
                 background-color: $orange;
@@ -162,12 +165,14 @@ body{
             }  
         }
         &::before{
+            
             content: '';
             background-color: $green;
             box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
             border-radius: 100%;
             width: 11px;
             height: 11px;
+            transition: .2s;
             position: absolute;
         }
         &_1{
@@ -271,8 +276,8 @@ body{
     color: $white;
     font-family: $font-jost;
     text-transform: uppercase;
+    border: none;
     padding: 2.5rem 4.2rem;
-    border: 1px solid $white;
     background-color: #d26a22;
     box-shadow: 0px 1rem 1.118rem .182rem rgba(207, 92, 13, 0.2);
     text-decoration: none;
@@ -285,9 +290,7 @@ body{
         font-size: 1.4rem;
     }
     &:hover{
-        color: $orange;
-        background-color: $white;
-        border: 1px solid $orange;
+        background-color: $darkorange;
     }
 }
 
@@ -332,6 +335,8 @@ body{
                 }
                 .swiper-slide__hover{
                     display: block;
+                    visibility: visible;
+                    opacity: 1;
                 }
                 &::after{
                     content: '';
@@ -348,6 +353,9 @@ body{
         }
         &__hover{
             display: none;
+            transition: .2s all linear;
+            visibility: hidden;
+            opacity: 0;
         }
         &:hover{
             box-shadow:  0 0 0 2px rgba($green, 0.4) inset;
@@ -414,6 +422,7 @@ body{
             font-weight: 700;
             letter-spacing: 0.1;
             gap: 20px;
+            transition: .2s;
             &:hover{
                 opacity: 1;
             }
@@ -661,6 +670,7 @@ body{
         text-align: center;
         margin-top: 6.6rem;
         gap: 15px;
+        transition: .2s;
         &::before{
             content: "";
             width: 25px;
@@ -668,6 +678,9 @@ body{
             background-image: url(../images/reload.svg);
             background-position: center center;
             background-size: cover;
+        }
+        &:hover{
+            opacity: 1;
         }
     }
 }
@@ -907,6 +920,7 @@ body{
         text-decoration: none;
         color: $green;
         font-size: 2.7rem;
+        margin-bottom: 4.1rem;
     }
     &__mail{
         margin-top: 4rem ;
@@ -945,15 +959,15 @@ body{
         }
         &__vk{
             background-image: url(../images/social/vk.svg);
-            background-size: 14px 34px;
+            background-size: 2.3rem;
         }
         &__inst{
             background-image: url(../images/social/inst.svg);
-            background-size: 18px 18px;
+            background-size: 1.8rem;
         }
         &__facebook{
             background-image: url(../images/social/facebook.svg);
-            background-size: 18px 9px;
+            background-size: 1.8rem;
         }
     }
     &__text{
@@ -970,17 +984,18 @@ body{
     }
     &__annblok{
         text-decoration: none;
-        color: $green;
+        color: rgba($green, .6);
+        transition: .2s;
     }
     &__author{
         margin: 0;
         font-size: 1.6rem;
-        color: $green;
-        opacity: .6;
+        color: rgba($green, .6);
         cursor: pointer;
+        transition: .2s;
         &:hover{
             .footer__annblok{
-                opacity: 1;
+                color: rgba($green, 1);
             }
         }
     }
