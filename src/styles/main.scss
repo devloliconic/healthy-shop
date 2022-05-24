@@ -25,6 +25,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6rem;
+    gap: 8rem;
     &__nav{
         display: flex;
         list-style-type: none;
@@ -32,11 +33,9 @@ body{
         padding-left: 0;
         gap: 4.8rem;
     }
-    &__flexitems{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-basis: 910px;
+    &__navigation{
+        flex-grow: 1;
+        margin-left: 4rem;
     }
     &__link{
         color: $green;
@@ -49,8 +48,10 @@ body{
     &__tel{
         color: $green;
         text-decoration: none;
+        letter-spacing: .13rem;
+        text-align: right;
+        flex-basis: 200px;
         font-weight: 500;
-        margin-left: 14rem;
         transition: .2s;
         &:hover{
             color:$orange;
@@ -59,7 +60,7 @@ body{
     &__cart{
         display: block;
         background-color: $orange;
-        width: 4rem;
+        flex-basis: 4rem;
         height: 4rem;
         background-image: url(../images/cart-black.svg);
         border-radius: 100%;
@@ -78,12 +79,12 @@ body{
         font-size: .8rem;
         color: $white;
         position:absolute;
-        right: 1rem;
+        right: .7rem;
         top: .5rem;
     }
 }
 .logo{
-    width: 12rem;
+    flex-basis: 12rem;
     height: 3.2rem;
     display: block;
     background-image: url(../images/logo1.svg);
@@ -148,8 +149,8 @@ body{
     }
     &__image{
         width: 92%;
-        box-shadow: 15px 20px 20px 0 rgba(#000,.2);
         border-radius: 100%;
+        animation: shadow 5s linear infinite;
     }
     &__btn{
         border: none;
@@ -806,6 +807,7 @@ body{
             transition: .2s;
             &:hover{
                 color: $orange;
+                
             }
             &::before{
                 content: "";
@@ -949,6 +951,7 @@ body{
             height: 46px;
             border: 1px solid rgba($green, .8);
             border-radius: 100%;
+            animation: shadow-link 5s linear infinite;
         }
         &__link{
             width: 100%;
@@ -962,6 +965,7 @@ body{
             }
         }
         &__vk{
+            
             background-image: url(../images/social/vk.svg);
             background-size: 2.3rem;
         }
@@ -1002,5 +1006,27 @@ body{
                 color: rgba($green, 1);
             }
         }
+    }
+}
+@keyframes shadow{
+    0%{
+        box-shadow: 0 0 0 0 rgba($green, .5);
+    }
+    50%{
+        box-shadow: 20px 20px 33px 0 rgba($green, .5);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba($green, .5);
+    }
+}
+@keyframes shadow-link{
+    0%{
+        box-shadow: 0 0 0 0 rgba($green, .5);
+    }
+    50%{
+        box-shadow: 0px 0px 10px 0 rgba($green, .5);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba($green, .5);
     }
 }
