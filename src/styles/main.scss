@@ -20,9 +20,13 @@ $r_desk_hd: 1200px;
 $r_desk_1120: 1120px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
+$r_desk_1600: 1600px;
 $r_desk_full_1700: 1750px;
 html{
     font-size: 10px;
+    @media(max-width: $r_mob_500){
+        font-size: 8px;
+    }
 }
 body{
     font-size: 1.6rem;
@@ -112,6 +116,11 @@ body{
             background-color: $white;
             opacity: .8;
         }
+        @media (max-width: $r_mob_500){
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 2rem;
+        }
         &:hover{
             background-color: $green;
             border: 1px solid $green;
@@ -126,6 +135,9 @@ body{
             display: flex;
             align-items: center;
             gap: 1.5rem;
+        }
+        @media (max-width: $r_mob_500){
+            gap: 1.4rem;
         }   
     }
     &__phone, &__menu{
@@ -148,6 +160,11 @@ body{
             transition: .2s;
             opacity: .8;
         }
+        @media (max-width: $r_mob_500){
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 1.9rem;
+        }
         &:hover{
             opacity: 1;
         }
@@ -169,6 +186,12 @@ body{
             opacity: .8;
             cursor: pointer;
         }
+        
+        @media (max-width: $r_mob_500){
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 2rem;
+        }
         &:hover{
             opacity: 1;
         }
@@ -181,6 +204,9 @@ body{
         top: .5rem;
         @media (max-width: $r_desk_hd){
             color:black;
+        }
+        @media (max-width: $r_mob_500){
+            font-size: 1rem;
         }
     }
 }
@@ -213,7 +239,10 @@ body{
 }
 .main{
     position: relative;
-    padding-bottom: 187px;
+    padding-bottom: 18.7rem;
+    @media (max-width: $r_tab_768){
+        padding-bottom: 10rem;
+    }
     z-index: 0;
     &__text{
         padding-top: 4rem;
@@ -318,6 +347,9 @@ body{
             margin-top: 3rem;
             border-radius: 100%;
             animation: shadow 5s linear infinite;
+        }
+        @media (max-width: $r_mob_500){
+            max-width: 220px;
         }
     }
     &__btn{
@@ -554,6 +586,9 @@ body{
 .offer{
     padding-top: 2rem;
     padding-bottom: 12.8rem;
+    @media (max-width: $r_tab_768){
+        padding-bottom: 4rem;
+    }
     &__text{
         margin-top: 6rem;
         max-width: 700px;
@@ -656,6 +691,10 @@ body{
                     margin: 0 auto;
                     min-height: 58px;
                 }
+                @media (max-width: $r_tab_768){
+                    font-size: 2rem;
+                    min-width:auto;
+                }
             }
         }
         &__text{
@@ -672,21 +711,28 @@ body{
             font-size: 1.8rem;
             margin-top: 31px;
             margin-bottom: 0;
-            min-height: 55px;
             line-height: 1.5;
             @media (max-width: $r_desk_hd){
-                min-height: 80px;
-                // max-width: 200px;
+                min-height: 30px;
+                max-width: 200px;
                 margin-top: 10px;
                 text-align: center;
+
             }
             &_litle{
                 font-size: 1.6rem;
                 margin-top: 31px;
                 max-width: 230px;
+                min-height: 55px;
+                @media (max-width: $r_tab_768){
+                    margin-top: 10px;
+                    text-align: center;
+                    min-height: 80px;
+                } 
             }
             @media (max-width: $r_desk_hd){
                 max-width: none;
+                font-size: 1.3rem;
             }
         }
 
@@ -735,12 +781,12 @@ body{
             text-align: center;
 
             @media (max-width: $r_desk_hd){
-                height: 100px;
+                height: 140px;
             }
             &_litle{
                 height: 220px;
-                @media (max-width: $r_desk_hd){
-                    height: 200px;
+                @media (max-width: $r_tab_768){
+                    height: 150px;
                 }
             }
         }
@@ -771,6 +817,10 @@ body{
                margin-top: 0;
                margin-bottom: 20px;
             }
+            @media (max-width: $r_tab_768){
+                font-size: 2rem;
+            }
+            
         }
         
     }
@@ -901,6 +951,7 @@ body{
         }
         @media (max-width: $r_tab_768) {
             flex-basis: 100%;
+            margin-left: 0;
         }
     }
     &__list{
@@ -976,6 +1027,9 @@ body{
 
 .catalog{
     padding-bottom: 17.4rem;
+    @media (max-width: $r_tab_768){
+        padding-bottom: 8rem;
+    }
     &__text{
         margin-top: 6rem;
     }
@@ -988,10 +1042,11 @@ body{
         margin-bottom: 50px;
         @media(max-width: $r_desk_1280){
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
     &__link{
-        padding: 27px 0;
+        padding: 2.7rem 0;
         text-align: center;
         width: 230px;
         border: 1px solid rgba($green, .5);
@@ -999,6 +1054,9 @@ body{
         text-decoration: none;
         color: rgba($green,.5);
         transition: .2s;
+        @media(max-width: $r_tab_900){
+            padding: 2rem 0;
+        }
         &:hover{
             border: 1px solid $orange;
             color: $orange;
@@ -1006,13 +1064,16 @@ body{
     }
     &__grid{
         display: grid;
-        grid-template-columns: repeat(4,25%);
-        gap: 20px 20px;
-        @media (max-width: $r_desk_1350){
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px 10px;
+        @media (max-width: $r_desk_1600){
             grid-template-columns: repeat(3,1fr);
         }
+        // @media (max-width: $r_desk_1120){
+        //     grid-template-columns: repeat(2,1fr);
+        // }
         @media (max-width: $r_desk_1120){
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2,50%);
         }
     }
     &__reload{
@@ -1045,7 +1106,10 @@ body{
     }
 }
 .pay{
-    padding-bottom: 200px;
+    padding-bottom: 20rem;
+    @media (max-width: $r_tab_768) {
+        padding-bottom: 0;
+    }
     &__bottomtext{
         display: block;
         margin-top: 40px;
@@ -1159,6 +1223,10 @@ body{
 }
 .contact{
     padding-bottom: 16.2rem;
+    @media (max-width: $r_tab_768) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
     &-box{
         display: flex;
         align-items: center;
@@ -1231,7 +1299,8 @@ body{
             transition: .2s;
             @media (max-width: $r_tab_768) {
                 justify-content: center;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
+                gap: 1rem;
             }
             &:hover{
                 color: $orange;
@@ -1346,6 +1415,12 @@ body{
             display: block;
         }
     }
+    &__logo{
+        @media (max-width: $r_tab_768) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
     &__list{
         list-style: none;
         
@@ -1353,16 +1428,32 @@ body{
         margin: 0;
         @media (max-width: $r_tab_768) {
             margin-top: 3rem;
+            text-align: center;
+        }
+        &_link{
+            @media (max-width: $r_tab_768) {
+                margin-top: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 29px;
+            }
         }
     }
     &__item{
         &:first-child{
             margin-top: 0;
         }
+        &:last-child{}
         margin-top: 4rem;
         font-size: 2rem;
-        @media (max-width: $r_tab_768) {
-            margin-top: 1rem;
+        @media (max-width: $r_tab_768){
+            margin-top: 0;
+        }
+        &_date{
+            @media (max-width: $r_tab_768){
+                margin-top: 3rem;
+            }
         }
     }
     &__link{
@@ -1391,6 +1482,7 @@ body{
         @media (max-width: $r_tab_768) {
             margin-top: 0;
             margin-bottom: 10px;
+            text-align: center;
         }
     }
     &__mail{
@@ -1399,6 +1491,9 @@ body{
         text-decoration: none;
         color: $green;
         font-size: 1.8rem;
+        @media (max-width: $r_tab_768) {
+            text-align: center;
+        }
     }
     &-social{
         padding: 0;
@@ -1409,7 +1504,7 @@ body{
         justify-content: space-between;
         align-items: center;
         @media (max-width: $r_tab_900) {
-            justify-content: initial;
+            justify-content: center;
             gap: 20px;
         }
         &__item{
@@ -1462,9 +1557,7 @@ body{
         color: $green;
         opacity: .6;
         @media (max-width: $r_tab_768) {
-            display: block;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
         }
     }
     &__annblok{
@@ -1480,6 +1573,7 @@ body{
         transition: .2s;
         @media (max-width: $r_tab_768) {
             margin-top: 2rem;
+            text-align: center;
         }
         &:hover{
             .footer__annblok{
