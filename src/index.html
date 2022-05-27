@@ -33,9 +33,13 @@
                 </ul>
             </nav>
             <a href="tel:+7945325555" class="header__tel">+7 945 342 55 55</a>
-            <button href="#" class="header__cart">
-                <span class="header__counter">0</span>
-            </button>
+            <div class="header__buttons">
+                <a href="tel:+7945325555" class="header__phone"></a>
+                <button href="#" class="header__menu"></button>
+                <button href="#" class="header__cart">
+                    <span class="header__counter">0</span>
+                </button>
+            </div>
         </header>
         <div class="container">
             <div class="main__flex">
@@ -46,6 +50,7 @@
                     </h1>
                     <div class="main__item">
                         <p class="description description_size-s">Сеть магазинов полезных продуктов питания, производство которых основано на&nbsp;принципах и стандартах органического чистых продуктов</p>
+                        <img class="main__imagemobi" src="/src/images/plate.png" alt=""> 
                         <div class="main__link">
                             <a href="#" class="link">Перейти в каталог</a>
                         </div>
@@ -83,8 +88,6 @@
                 <p class="description description_size-m">Органика — это целостная система производства по-настоящему чистой, натуральной и полезной продукции</p>
             </div>
             <div class="slider">
-            
-            
                 <div class="swiper offerSwiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide swiper-slide_white swiper-slide_1">
@@ -212,7 +215,7 @@
                             <div class="swiper-slide__cover">
                                 <img class="swiper-slide__img" src="images/catalog/milk.png" alt="">
                             </div>
-                            <h3 class="swiper-slide__title">
+                            <h3 class="swiper-slide__title swiper-slide__title_litle">
                                 Молочные продукты 
                             </h3>
                             <p class="swiper-slide__description">Молоко Healthy food топленеое мдж 4%	500гр</p>
@@ -223,14 +226,14 @@
                                     <input class="counter__input" type="text" value="0">
                                     <button class="counter__btn counter__plus"></button>
                                 </div>
-                                <a href="#" class="link">в корзину</a>
+                                <a href="#" class="link link_medium">в корзину</a>
                             </div>
                         </div>
                         <div class="swiper-slide swiper-slide_trends">
                             <div class="swiper-slide__cover">
                                 <img class="swiper-slide__img" src="images/catalog/eggs.png" alt="">
                             </div>
-                            <h3 class="swiper-slide__title">
+                            <h3 class="swiper-slide__title swiper-slide__title_litle">
                                 Яйцо перепелиное 
                             </h3>
                             <p class="swiper-slide__description">QEGG Яйцо перепелиное 20шт</p>
@@ -241,14 +244,14 @@
                                     <input class="counter__input" type="text" value="0">
                                     <button class="counter__btn counter__plus"></button>
                                 </div>
-                                <a href="#" class="link">в корзину</a>
+                                <a href="#" class="link link_medium">в корзину</a>
                             </div>
                         </div>
                         <div class="swiper-slide swiper-slide_trends">
                             <div class="swiper-slide__cover">
                                 <img class="swiper-slide__img" src="images/chiken.jpg" alt="">
                             </div>
-                            <h3 class="swiper-slide__title">
+                            <h3 class="swiper-slide__title swiper-slide__title_litle">
                                 Куриное филе Оссобукоы 
                             </h3>
                             <p class="swiper-slide__description">Куриное филе Оссобуко (Ангус) охл скин. В вакумной уапаковке</p>
@@ -259,7 +262,7 @@
                                     <input class="counter__input" type="text" value="0">
                                     <button class="counter__btn counter__plus"></button>
                                 </div>
-                                <a href="#" class="link">в корзину</a>
+                                <a href="#" class="link link_medium">в корзину</a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +293,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/milk.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Молоко топленое 
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Молоко Healthy food топленеое мдж 4%	500гр</p>
@@ -308,7 +311,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/drink.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Йогурт с черникой
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Йогурт Healthy food&nbspс&nbspчерникой, питьевой 1,5%, 750 г</p>
@@ -326,7 +329,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/curd.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Творог
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Творог&nbspHealthy&nbspfood&nbspРассыпчатый 9% 350 г </p>
@@ -344,7 +347,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/ches.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Моцарелла 
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Моцарелла Healthy food   45%,&nbsp0.125 кг</p>
@@ -362,7 +365,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/oil.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Масло сливочное 
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Масло Healthy food  сливочное 82,5%, 200г </p>
@@ -380,7 +383,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/ftuts.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Йогурт термостатный
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Йогурт&nbspHealthy&nbspfood&nbspтермостатный  с&nbspфруктово-&nbspягодным 2,5 %, 165</p>
@@ -398,7 +401,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/ches_next.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Сыр 
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Сыр&nbspHealthy&nbspfood&nbspСливочный&nbsp45% 200г</p>
@@ -416,7 +419,7 @@
                     <div class="swiper-slide__cover swiper-slide__cover_litle">
                         <img class="swiper-slide__img swiper-slide__img_litle" src="images/catalog/sous.png" alt="">
                     </div>
-                    <h3 class="swiper-slide__title">
+                    <h3 class="swiper-slide__title swiper-slide__title_litle">
                         Соус для салата 
                     </h3>
                     <p class="swiper-slide__description swiper-slide__description_litle">Соус для салата Healthy food пикантыный 4%  70гр</p>

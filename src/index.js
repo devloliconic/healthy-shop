@@ -21,6 +21,25 @@ var swiper = new Swiper(".offerSwiper", {
       prevEl: ".swiper-button-prev",
     },
     modules: [Navigation, Pagination],
+      breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 1,
+      slidesPerGroup: 1
+    },
+    768:{
+      slidesPerView: 2,
+      spaceBetween: 2,
+      slidesPerGroup: 1
+    },
+    
+    1000:{
+      slidesPerView: 3,
+      spaceBetween: 3,
+      slidesPerGroup: 1
+    }
+  }
   });
   var swiper = new Swiper(".trendsSwiper", {
     slidesPerView: 3,
@@ -37,4 +56,23 @@ var swiper = new Swiper(".offerSwiper", {
       prevEl: ".swiper-button-prev",
     },
     modules: [Navigation, Pagination],
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 1,
+        slidesPerGroup: 1
+      },
+      768:{
+        slidesPerView: 2,
+        spaceBetween: 2,
+        slidesPerGroup: 1
+      },
+      
+      1000:{
+        slidesPerView: 3,
+        spaceBetween: 3,
+        slidesPerGroup: 1
+      }
+    }
   });
