@@ -27,6 +27,7 @@ html{
     @media(max-width: $r_mob_500){
         font-size: 8px;
     }
+
 }
 body{
     font-size: 1.6rem;
@@ -35,7 +36,7 @@ body{
     background-image: url(../images/bg.png);
     background-size: contain;
     background-repeat: no-repeat;
-
+    overflow-x: hidden;
 }
 
 .header{
@@ -446,6 +447,10 @@ body{
             width: 8rem;
             right: 40px;
         }
+        @media (max-width: $r_mob_500){
+            left: 10px;
+            top: 340px;
+        }
     }
     &__avocado{
         position: absolute;
@@ -457,6 +462,9 @@ body{
             top: 120px;
             width: 9.8rem;
         }
+        @media (max-width: $r_mob_600){
+            top: 90px;
+        }
     }
     &__cucumber{
         position: absolute;
@@ -467,6 +475,14 @@ body{
         @media (max-width: $r_desk_hd) {
             left: 40%;
         }
+        @media (max-width: $r_mob_600){
+            right: -15px;
+            bottom: 210px;
+            transform: rotate(90deg);
+            top: initial;
+            left: initial;
+        }
+        
     }
     &__papper{
         position:absolute;
@@ -566,6 +582,9 @@ body{
             padding: 2.5rem 4.2rem;
             margin: 0 auto;
         }
+        @media (max-width: $r_tab_768){
+            padding: 2rem 2.4rem
+        }
     }
     &_medium{
         @media(max-width: $r_desk_1350){
@@ -599,9 +618,11 @@ body{
 .slider{
     overflow: hidden;
     padding-bottom: 6rem;
-    padding-top: 100px;
+    padding-top: 10rem;
     @media (max-width: $r_tab_768) {
         max-width: 450px;
+        padding-top: 4rem;
+        padding-bottom: 7rem;
         margin: 0 auto;
     }
 }
@@ -693,7 +714,6 @@ body{
                 }
                 @media (max-width: $r_tab_768){
                     font-size: 2rem;
-                    min-width:auto;
                 }
             }
         }
@@ -717,6 +737,10 @@ body{
                 max-width: 200px;
                 margin-top: 10px;
                 text-align: center;
+                @media (max-width: $r_desk_hd){
+                    max-width: none;
+                    font-size: 2rem;
+                }
 
             }
             &_litle{
@@ -724,16 +748,17 @@ body{
                 margin-top: 31px;
                 max-width: 230px;
                 min-height: 55px;
+                @media (max-width: $r_desk_hd){
+                    max-width: none;
+                    font-size: 1.4rem;
+                }
                 @media (max-width: $r_tab_768){
                     margin-top: 10px;
                     text-align: center;
                     min-height: 80px;
                 } 
             }
-            @media (max-width: $r_desk_hd){
-                max-width: none;
-                font-size: 1.3rem;
-            }
+
         }
 
         &__link{
@@ -781,7 +806,7 @@ body{
             text-align: center;
 
             @media (max-width: $r_desk_hd){
-                height: 140px;
+                height: 200px;
             }
             &_litle{
                 height: 220px;
@@ -1022,6 +1047,9 @@ body{
     padding-bottom: 20rem;
     &__description{
         margin-top: 6.2rem;
+    }
+    @media (max-width: $r_tab_768){
+        padding-bottom: 8rem;
     }
 }
 
