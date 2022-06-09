@@ -36,7 +36,7 @@ var swiper = new Swiper(".offerSwiper", {
     
     1000:{
       slidesPerView: 3,
-      spaceBetween: 3,
+      spaceBetween: 18,
       slidesPerGroup: 1
     }
   }
@@ -71,7 +71,7 @@ var swiper = new Swiper(".offerSwiper", {
       
       1000:{
         slidesPerView: 3,
-        spaceBetween: 3,
+        spaceBetween: 18,
         slidesPerGroup: 1
       }
     }
