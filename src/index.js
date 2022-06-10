@@ -76,3 +76,10 @@ var swiper = new Swiper(".offerSwiper", {
       }
     }
   });
+
+const openModal =  () => {
+  document.getElementById("Notification").style.display = "block";
+}
+function closeModal(){
+  document.getElementById("Notification").style.visibility = "hidden";
+}
